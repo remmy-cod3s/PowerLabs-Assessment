@@ -56,19 +56,19 @@ http://localhost:3000/tasks/1 — get task with id 1
 
 The examples below are used in the Powershell terminal
 
-CREATE A TASK
+CREATE A TASK: 
 Invoke-RestMethod -Uri http://localhost:3000/tasks -Method POST -ContentType "application/json" -Body '{"title":"Test task","description":"testing","status":"pending","dueDate":"2026-09-10"}'
 
-GET ALL TASKS
+GET ALL TASKS: 
 Invoke-RestMethod -Uri http://localhost:3000/tasks -Method GET
 
-GET A SPECIFIC TASK
+GET A SPECIFIC TASK: 
 Invoke-RestMethod -Uri http://localhost:3000/tasks/1 -Method GET
 
-UPDATE A TASK
+UPDATE A TASK: 
 Invoke-RestMethod -Uri http://localhost:3000/tasks/1 -Method PUT -ContentType "application/json" -Body '{"title":"Updated task","description":"testing","status":"completed","dueDate":"2026-09-10"}'
 
-DELETE A TASK
+DELETE A TASK: 
 Invoke-RestMethod -Uri http://localhost:3000/tasks/1 -Method DELETE
 It would should a red error message saying task not found this means the tasks has been deleted
 # Assumptions & Decisions
