@@ -80,7 +80,10 @@ Deleting a task would return a 404 error which means the task was successfully r
 
 # Assumptions & Decisions
 
-- API only, no frontend UI. Given the time available, I focused on a correctly-working backend, tested via Thunder Client extension /curl. A frontend could be built on top of these endpoints if needed. -`PUT` fully replaces a task, rather than partially patching fields. Clients must send all fields on update, and a missing `title` on update is rejected the same way as on create. -`title` is required on both create and update; requests without it return `400` -`dueDate` and `createdAt` are stored as plain text,
+- API only, no frontend UI. Given the time available, I focused on a correctly-working backend, tested via Thunder Client extension /curl. A frontend could be built on top of these endpoints if needed. 
+- `PUT` fully replaces a task, rather than partially patching fields. Clients must send all fields on update, and a missing `title` on update is rejected the same way as on create. 
+- `title` is required on both create and update; requests without it return `400` 
+- `dueDate` and `createdAt` are stored as plain text,
 - Validation is minimal by design: app only checks if `title` is present.
 - No separate service/controller layers: For 5 endpoints, keeping route + logic together in one file is easier to read than splitting into extra layers that would only hold a line or two each.
 
