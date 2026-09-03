@@ -38,9 +38,9 @@ Make sure `server.js` is running
 2: Set the method (GET/POST/PUT/DELETE) and URL (e.g. http://localhost:3000/tasks)
 
 3: For POST/PUT, go to the Body tab → select JSON → paste a task object, e.g.:
-json '''
-   {"title":"Write README","description":"Document the API","status":"pending","dueDate":"2026-09-10"}
-'''
+```json
+{"title":"Write README","description":"Document the API","status":"pending","dueDate":"2026-09-10"}
+```
 
 4: Click Send
 
@@ -70,7 +70,7 @@ Invoke-RestMethod -Uri http://localhost:3000/tasks/1 -Method PUT -ContentType "a
 
 DELETE A TASK: 
 Invoke-RestMethod -Uri http://localhost:3000/tasks/1 -Method DELETE
-It would should a red error message saying task not found this means the tasks has been deleted
+Deleting a task would return a 404 error which means the task was successfully removed
 # Assumptions & Decisions
 
 - API only, no frontend UI. Given the time available, I focused on a correctly-working backend, tested via Thunder Client extension /curl. A frontend could be built on top of these endpoints if needed.
@@ -92,4 +92,4 @@ Completed all requirements
 
 # Repository
 
-<!-- Add your GitHub repo URL here once pushed -->
+https://github.com/remmy-cod3s/PowerLabs-Assessment.git
