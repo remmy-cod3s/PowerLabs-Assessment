@@ -11,7 +11,8 @@ A simple REST API for managing tasks, built for the PowerLabs Software Engineeri
 # Setup & Running
 
 ```bash
-npm install
+npm install express
+npm install better-sqlite3
 node server.js
 ```
 
